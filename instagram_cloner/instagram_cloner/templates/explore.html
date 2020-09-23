@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+    <div class="columns">
+        <div class="column is-one-quarter">
+            {% for user in all_users %}
+                <div class="box">
+                    <article class="media">
+                        <div class="media-left">
+                            <figure class="image is-64x64">
+                                {% if user.picture %}
+                                    <img src="{{ user.picture.url }}" alt="Placeholder image">
+                                {% else %}
+                                    <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                                {% endif %}
+                            </figure>
+                        </div>
+                        <div class="media-content">
+                            <div class="content">
+                                <p>
+                                    <small><a href="{% url 'profile' user.user %}">{{ user.user }}</a></small>
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            {% endfor %}
+
+            
+        </div>
+    </div>
+
+{% endblock %}

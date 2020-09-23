@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load embed_video_tags %}
+
+{% block content %}
+<div class="columns is-mobile is-multiline is-centered">
+
+    {% for i in obj %}
+    <div class="column is-one-quarter">
+        <div class="box">
+            {% video i.video 'small' %}
+        </div>
+    </div>
+    {% endfor %}
+
+    
+</div>
+{% endblock %}
