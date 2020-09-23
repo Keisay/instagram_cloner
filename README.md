@@ -29,4 +29,4 @@ python manage.py runserver
 
 * [Django](https://www.djangoproject.com/) - The Web framework used
 * [Pillow](https://pillow.readthedocs.io/en/stable/) - The Python Imaging Library
-* [Bootstrap](https://getbootstrap.com/) - The CSS framework used
+* [Bulma](https://bulma.io/) - The CSS framework used
